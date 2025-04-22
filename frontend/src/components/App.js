@@ -3,35 +3,20 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import ChatBot from './Chatbot';
-
-
-
-// function App() {
-//   return (
-//     <div>
-//       <Router>
-//         <div>
-//           <Routes>
-//             {/* <Route path="/" element={<Home />} /> */}
-//             <Route path="/chat" element={<ChatBot />} />
-//             {/* <Route path="/about" element={<About />} /> */}
-//           </Routes>
-//         </div>
-//       </Router>
-//       <Footer />
-//     </div>
-//   );
-// }
+import GoalSetting from './GoalSetting';
 
 function App() {
   return (
-    <div>
+    <Router>
       <Header />
-      <ChatBot />
+      <Routes>
+        <Route path="/ai-mentor" element={<ChatBot />} />
+        <Route path="/goal-tracking" element={<GoalSetting />} />
+        <Route path="/" element={<h1 style={{ padding: '2rem' }}>Welcome to the Dashboard</h1>} />
+      </Routes>
       <Footer />
-    </div>
+    </Router>
   );
 }
-
 
 export default App;
