@@ -26,6 +26,7 @@ import ChatBot from './Chatbot';
 function App() {
   return (
     <div>
+      <Header />
       <ChatBot />
       <Footer />
     </div>

@@ -1,12 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
 
-function ChatBot({ endpoint = 'http://localhost:5000', title = '💬 My Mentor' }) {
+function ChatBot({ endpoint = 'http://localhost:5001', title = '💬 My Mentor' }) {
   const [input, setInput] = useState('');
   const [chat, setChat] = useState([]);
   const [chatSessions, setChatSessions] = useState([]);
   const [currentSessionId, setCurrentSessionId] = useState(null);
 
-  // Wrap loadSession in useCallback to avoid dependency cycles
   const loadSession = useCallback((sessionId) => {
     const session = chatSessions.find(s => s.id === sessionId);
     if (session) {
