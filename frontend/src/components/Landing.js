@@ -1,7 +1,10 @@
 import React from "react";
-import '../index.css'; 
+import { useNavigate } from "react-router-dom"; 
+import '../index.css';
 
 function Landing() {
+  const navigate = useNavigate(); 
+
   return (
     <div className="container">
       <div className="dashboard">
@@ -23,7 +26,10 @@ function Landing() {
                 <p className="card-text">
                   The founder space is complex. Get advice and set goals with an AI mentor here!
                 </p>
-                <button className="card-button">
+                <button
+                  className="card-button"
+                  onClick={() => navigate('/ai-mentor')} 
+                >
                   <span>AI Mentor</span>
                 </button>
               </div>
@@ -34,7 +40,10 @@ function Landing() {
                 <p className="card-text">
                   Discover how you can improve your traits! Track milestones and get personalized insights to grow faster!
                 </p>
-                <button className="card-button">
+                <button
+                  className="card-button"
+                  onClick={() => navigate('/goal-tracking')}
+                >
                   <span>Goal Tracker</span>
                 </button>
               </div>
