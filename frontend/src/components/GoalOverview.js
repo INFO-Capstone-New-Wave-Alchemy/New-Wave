@@ -21,6 +21,13 @@ const GoalOverview = () => {
     localStorage.setItem('goals', JSON.stringify(updatedGoals));
   };
 
+  const handleMarkCompleted = (index) => {
+    const updatedGoals = [...goals];
+    updatedGoals[index].status = 'Completed';
+    setGoals(updatedGoals);
+    localStorage.setItem('goals', JSON.stringify(updatedGoals));
+  };
+
   const filteredGoals = goals.filter(goal => {
     const matchesSearch = goal.title.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesPriority = priorityFilter === 'All Priorities' || goal.priority === priorityFilter;
@@ -74,7 +81,16 @@ const GoalOverview = () => {
               <p className="goal-desc">{goal.description}</p>
               <p className="goal-info">📅 Target: {goal.date}</p>
               <p className="goal-info">⏱ Status: {goal.status}</p>
-              <button className="delete-goal-button" onClick={() => handleDeleteGoal(idx)}>Delete</button>
+              <div className="goal-actions">
+                {goal.status !== 'Completed' && (
+                  <button className="complete-goal-button" onClick={() => handleMarkCompleted(idx)}>
+                    Mark as Completed
+                  </button>
+                )}
+                <button className="delete-goal-button" onClick={() => handleDeleteGoal(idx)}>
+                  Delete
+                </button>
+              </div>
             </div>
           ))
         )}

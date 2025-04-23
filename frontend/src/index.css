@@ -762,5 +762,34 @@ code {
   display: flex;
   align-items: center;
   gap: 16px;
+}.complete-goal-button {
+  background-color: #bbf7d0;
+  color: #065f46;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.complete-goal-button:hover {
+  background-color: #86efac;
+}
+
+.delete-goal-button {
+  background-color: #fecaca;
+  color: #991b1b;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-goal-button:hover {
+  background-color: #fca5a5;
 }
 
