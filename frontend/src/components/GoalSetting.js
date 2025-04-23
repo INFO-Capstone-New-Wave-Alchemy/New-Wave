@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
-import '../index.css'; 
+import { useNavigate } from 'react-router-dom';
+import '../index.css';
 
 const GoalSetting = () => {
+  const navigate = useNavigate();
+
   const [goal, setGoal] = useState({
     title: '',
     description: '',
@@ -16,8 +19,10 @@ const GoalSetting = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Goal submitted:', goal);
-    // Save the goal to a backend or localStorage
+    const existingGoals = JSON.parse(localStorage.getItem('goals')) || [];
+    const updatedGoals = [...existingGoals, { ...goal, status: 'Not Started' }];
+    localStorage.setItem('goals', JSON.stringify(updatedGoals));
+    navigate('/goal-overview');
   };
 
   return (
