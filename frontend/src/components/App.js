@@ -4,7 +4,7 @@ import Header from './Header';
 import Footer from './Footer';
 import ChatBot from './Chatbot';
 import GoalSetting from './GoalSetting';
-import GoalOverview from './GoalOverview'; // ✅ import the new component
+import GoalOverview from './GoalOverview';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Route path="/" element={<h1 style={{ padding: '2rem' }}>Welcome to the Dashboard</h1>} />
         <Route path="/ai-mentor" element={<ChatBot />} />
         <Route path="/goal-tracking" element={<GoalSetting />} />
-        <Route path="/goal-overview" element={<GoalOverview />} /> {/* ✅ add this line */}
+        <Route path="/goal-overview" element={<GoalOverview />} />
       </Routes>
       <Footer />
     </Router>
