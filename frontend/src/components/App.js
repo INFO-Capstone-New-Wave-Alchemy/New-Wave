@@ -6,6 +6,7 @@ import ChatBot from './Chatbot';
 import GoalSetting from './GoalSetting';
 import GoalOverview from './GoalOverview';
 import Landing from './Landing';
+import Contact from './Contact';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/ai-mentor" element={<ChatBot />} />
         <Route path="/goal-tracking" element={<GoalSetting />} />
         <Route path="/goal-overview" element={<GoalOverview />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </Router>
