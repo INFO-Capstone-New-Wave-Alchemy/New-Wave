@@ -12,14 +12,15 @@ function Header() {
   return (
     <header className="navbar">
       <div className="navbar-container">
-        <div className="navbar-content">
-          {/* Logo */}
-          <div className="navbar-logo">
-            <a href="/" className="logo-link">
-              <img src={logo} alt="NEWWAVE Logo" className="logo-image" />
-            </a>
-          </div>
-          
+        {/* Logo on the left */}
+        <div className="navbar-logo">
+          <a href="/" className="logo-link">
+            <img src={logo} alt="NEWWAVE Logo" className="logo-image" />
+          </a>
+        </div>
+
+        {/* All links on the right */}
+        <div className="navbar-links-wrapper">
           {/* Desktop Navigation */}
           <div className="navbar-links-desktop">
             <a href="/" className="nav-link">Home</a>
@@ -27,8 +28,8 @@ function Header() {
             <a href="/goal-tracking" className="nav-link">Goal Tracking</a>
             <a href="/contact" className="contact-button">Contact Us</a>
           </div>
-          
-          {/* Mobile menu button */}
+
+          {/* Mobile menu toggle */}
           <div className="navbar-mobile-toggle">
             <button
               onClick={toggleMenu}
@@ -36,7 +37,7 @@ function Header() {
               aria-expanded={isMenuOpen}
             >
               <span className="sr-only">Open main menu</span>
-              {/* Icon when menu is closed */}
+              {/* Icon when closed */}
               <svg
                 className={isMenuOpen ? "hidden" : "mobile-icon"}
                 xmlns="http://www.w3.org/2000/svg"
@@ -44,14 +45,9 @@ function Header() {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
-              {/* Icon when menu is open */}
+              {/* Icon when open */}
               <svg
                 className={isMenuOpen ? "mobile-icon" : "hidden"}
                 xmlns="http://www.w3.org/2000/svg"
@@ -59,25 +55,20 @@ function Header() {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
         </div>
+      </div>
 
-        {/* Mobile menu */}
-        <div className={`navbar-mobile-menu ${isMenuOpen ? "show" : ""}`}>
-          <div className="mobile-menu-links">
-            <a href="/" className="mobile-nav-link">Home</a>
-            <a href="/ai-mentor" className="mobile-nav-link">AI Mentor</a>
-            <a href="/goal-tracking" className="mobile-nav-link">Goal Tracking</a>
-            <a href="/contact" className="mobile-contact-button">Contact Us</a>
-          </div>
+      {/* Mobile menu */}
+      <div className={`navbar-mobile-menu ${isMenuOpen ? "show" : ""}`}>
+        <div className="mobile-menu-links">
+          <a href="/" className="mobile-nav-link">Home</a>
+          <a href="/ai-mentor" className="mobile-nav-link">AI Mentor</a>
+          <a href="/goal-tracking" className="mobile-nav-link">Goal Tracking</a>
+          <a href="/contact" className="mobile-contact-button">Contact Us</a>
         </div>
       </div>
     </header>

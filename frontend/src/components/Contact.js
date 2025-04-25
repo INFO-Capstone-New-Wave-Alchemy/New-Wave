@@ -1,27 +1,19 @@
 import React from "react";
-
 import '../index.css';
 
 function Contact() {
   return (
-    <div className="container">
-      <div className="dashboard">
-        <main className="main-content">
-          <div className="content-wrapper">
-            <h1 className="title">
-              Have a Question?
-            </h1>
-            <p className="subtitle">
-              Contact us:
-            </p>
-            <p className="subtitle">
-              <h3>Email: www.thenewwaveventure.io</h3>
-            </p>
-            <p className="subtitle">
-                <h3>Phone: +1 (719) 565-9196</h3>
-            </p>
-          </div>
-        </main>
+    <div className="contact-page">
+      <div className="contact-card">
+        <h2>Have a Question?</h2>
+        <p className="contact-subtitle">Contact us:</p>
+        <p className="contact-info">
+          <strong>Email:</strong>{' '}
+          <a href="mailto:www.thenewwaveventure.io">www.thenewwaveventure.io</a>
+        </p>
+        <p className="contact-info">
+          <strong>Phone:</strong> +1 (719) 565-9196
+        </p>
       </div>
     </div>
   );

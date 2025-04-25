@@ -1,9 +1,12 @@
-function PageFooter(props) {
-    return (
-        <footer>
-            <p>&copy; New Wave 2025</p>
-        </footer>
-    )
+function PageFooter() {
+  return (
+    <footer className="page-footer">
+      <div className="footer-content">
+        <p>&copy; 2025 New Wave. All rights reserved.</p>
+      </div>
+    </footer>
+  );
 }
 
 export default PageFooter;
+  

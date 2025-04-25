@@ -83,7 +83,7 @@ const GoalOverview = () => {
               <p className="goal-info">⏱ Status: {goal.status}</p>
               <div className="goal-actions">
                 {goal.status !== 'Completed' && (
-                  <button className="complete-goal-button" onClick={() => handleMarkCompleted(idx)}>
+                  <button className="complete" onClick={() => handleMarkCompleted(idx)}>
                     Mark as Completed
                   </button>
                 )}
