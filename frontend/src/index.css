@@ -1547,6 +1547,7 @@ button.delete:hover {
   position: relative;
   width: 100%;
   margin-top: 40px;
+  margin-left: 40px;
   right: auto;
   top: auto;
   max-width: 400px

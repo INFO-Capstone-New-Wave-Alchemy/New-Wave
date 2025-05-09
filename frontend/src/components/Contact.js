@@ -15,6 +15,14 @@ function Contact() {
           <strong>Phone:</strong> +1 (719) 565-9196
         </p>
       </div>
+      {/* Right content - Image placeholder */}
+      <div className="image-placeholder">
+          <img
+            src="../img/NWV_LinkedIn_PFP_v01.png"
+            alt="Dashboard Preview"
+            className="dashboard-image"
+          />
+        </div>
     </div>
   );
 }
