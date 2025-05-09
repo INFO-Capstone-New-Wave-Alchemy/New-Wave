@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; 
 import '../index.css';
 import logo from '../img/NEWWAVE-Wordmark-Blue.png';
 
@@ -14,19 +15,21 @@ function Header() {
       <div className="navbar-container">
         {/* Logo on the left */}
         <div className="navbar-logo">
-          <a href="/" className="logo-link">
+          <Link to="/" className="logo-link">
             <img src={logo} alt="NEWWAVE Logo" className="logo-image" />
-          </a>
+          </Link>
         </div>
 
         {/* All links on the right */}
         <div className="navbar-links-wrapper">
           {/* Desktop Navigation */}
           <div className="navbar-links-desktop">
-            <a href="/" className="nav-link">Home</a>
-            <a href="/ai-mentor" className="nav-link">AI Mentor</a>
-            <a href="/goal-tracking" className="nav-link">Goal Tracking</a>
-            <a href="/contact" className="contact-button">Contact Us</a>
+            <Link to="/" className="nav-link">Home</Link>
+            <Link to="/ai-mentor" className="nav-link">AI Mentor</Link>
+            <Link to="/goal-tracking" className="nav-link">Goal Tracking</Link>
+            <Link to="/goal-overview" className="nav-link">Goal Overview</Link>
+            <Link to="/goal-dashboard" className="nav-link">Goal Dashboard</Link>
+            <Link to="/contact" className="contact-button">Contact Us</Link>
           </div>
 
           {/* Mobile menu toggle */}
@@ -65,10 +68,12 @@ function Header() {
       {/* Mobile menu */}
       <div className={`navbar-mobile-menu ${isMenuOpen ? "show" : ""}`}>
         <div className="mobile-menu-links">
-          <a href="/" className="mobile-nav-link">Home</a>
-          <a href="/ai-mentor" className="mobile-nav-link">AI Mentor</a>
-          <a href="/goal-tracking" className="mobile-nav-link">Goal Tracking</a>
-          <a href="/contact" className="mobile-contact-button">Contact Us</a>
+          <Link to="/" className="mobile-nav-link">Home</Link>
+          <Link to="/ai-mentor" className="mobile-nav-link">AI Mentor</Link>
+          <Link to="/goal-tracking" className="mobile-nav-link">Goal Tracking</Link>
+          <Link to="/goal-overview" className="mobile-nav-link">Goal Overview</Link>
+          <Link to="/goal-dashboard" className="mobile-nav-link">Goal Dashboard</Link>
+          <Link to="/contact" className="mobile-contact-button">Contact Us</Link>
         </div>
       </div>
     </header>
